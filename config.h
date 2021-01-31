@@ -234,10 +234,10 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
 
-	{ TERMMOD,		XK_K,		zoom,		{.i = +1} },
-	{ TERMMOD,		XK_J,		zoom,		{.i = -1} },
-	{ TERMMOD,		XK_U,		zoom,		{.i = +4} },
-	{ TERMMOD,		XK_D,		zoom,		{.i = -4} },
+	{ TERMMOD,		XK_K,		zoom,		{.f = +1} },
+	{ TERMMOD,		XK_J,		zoom,		{.f = -1} },
+	{ TERMMOD,		XK_U,		zoom,		{.f = +4} },
+	{ TERMMOD,		XK_D,		zoom,		{.f = -4} },
 
 };
 
