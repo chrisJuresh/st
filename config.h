@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /*
  * appearance
  *
@@ -191,7 +190,7 @@ ResourcePref resources[] = {
 		{ "color15",      STRING,  &colorname[15] },
 		{ "background",   STRING,  &colorname[0] },
 		{ "foreground",   STRING,  &colorname[7] },
-		{ "cursorColor",  STRING,  &colorname[15] },
+		{ "cursorColor",  STRING,  &colorname[8] },
 		{ "termname",     STRING,  &termname },
 		{ "shell",        STRING,  &shell },
 		{ "minlatency",   INTEGER, &minlatency },
@@ -224,20 +223,16 @@ static MouseShortcut mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
-	{ MODKEY,		XK_c,           clipcopy,       {.i =  0} },
-	{ MODKEY,		XK_v,           clippaste,      {.i =  0} },
-        { MODKEY,               XK_l,           copyurl,        {.i =  0} },
 
+	{ Mod1Mask,		XK_c,           clipcopy,       {.i =  0} },
+	{ Mod1Mask,		XK_v,           clippaste,      {.i =  0} },
+        { Mod1Mask,		XK_l,           copyurl,        {.i =  0} },
 
-	{ MODKEY,               XK_k,           kscrollup,      {.i =  1} },
-	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
-	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
+	{ MODKEY,               XK_i,           kscrollup,      {.i =  4} },
+	{ MODKEY,               XK_u,           kscrolldown,    {.i =  4} },
 
-	{ TERMMOD,		XK_K,		zoom,		{.f = +1} },
-	{ TERMMOD,		XK_J,		zoom,		{.f = -1} },
-	{ TERMMOD,		XK_U,		zoom,		{.f = +4} },
-	{ TERMMOD,		XK_D,		zoom,		{.f = -4} },
+	{ TERMMOD,		XK_I,		zoom,		{.f = +4} },
+	{ TERMMOD,		XK_U,		zoom,		{.f = -4} },
 
 };
 
